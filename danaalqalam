@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dana Alqalam | دانة القلم</title>
+<meta name="description" content="Remote administrative assistant & Arabic–English translator | مساعدة إدارية عن بعد ومترجمة عربي ↔ إنجليزي">
+<meta property="og:title" content="Dana Alqalam | دانة القلم">
+<meta property="og:description" content="Remote administrative assistant & Arabic–English translator">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f766e'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='white' font-family='sans-serif'>D</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--a:#0f766e;--ink:#1f2937;--bg:#f7f5f2;--mut:#6b7280}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
+header{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:.6rem 5%;background:rgba(255,255,255,.92);border-bottom:1px solid #e5e7eb}
+nav a{margin-inline:.55rem;color:var(--ink);text-decoration:none;font-size:.92rem}
+nav a:hover{color:var(--a)}
+.btn{display:inline-block;padding:.55rem 1.3rem;border-radius:999px;border:2px solid var(--a);background:var(--a);color:#fff;text-decoration:none;font:600 .95rem 'Cairo',sans-serif;cursor:pointer}
+.btn.o{background:transparent;color:var(--a)}
+.hero{text-align:center;padding:4rem 5% 3rem;background:linear-gradient(180deg,#e6f2f0,var(--bg))}
+.av{width:110px;height:110px;margin:0 auto 1rem;border-radius:50%;background:var(--a);color:#fff;font-size:3rem;display:flex;align-items:center;justify-content:center}
+h1{font-size:2.2rem}
+.role{color:var(--mut);margin:.4rem 0 1.4rem}
+.hero .btn{margin:.3rem}
+section{max-width:900px;margin:auto;padding:2.6rem 5%}
+h2{color:var(--a);margin-bottom:1rem;font-size:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.card{background:#fff;border-radius:16px;padding:1.1rem;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.card h3{font-size:1.05rem;margin-bottom:.3rem}
+.card p{color:var(--mut);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{background:#fff;border:1px solid #d1e7e4;border-radius:999px;padding:.2rem .9rem;font-size:.92rem}
+ul{padding-inline-start:1.3rem}
+.soon{border:2px dashed #cbd5d3;background:transparent;text-align:center;color:var(--mut);padding:2.2rem 1rem}
+.links .btn{margin:.25rem}
+form{display:grid;gap:.7rem;margin-top:1rem}
+input,textarea{width:100%;padding:.7rem;border:1px solid #d1d5db;border-radius:12px;font:inherit}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:.9rem}
+@media(max-width:700px){nav{display:none}h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header>
+  <strong id="logo"></strong>
+  <nav>
+    <a href="#about" data-i="n1"></a><a href="#skills" data-i="n2"></a><a href="#courses" data-i="n3"></a>
+    <a href="#services" data-i="n4"></a><a href="#links" data-i="n5"></a><a href="#contact" data-i="n6"></a>
+  </nav>
+  <button class="btn o" id="tg" type="button"></button>
+</header>
+
+<div class="hero">
+  <div class="av" id="av"></div>
+  <h1 data-i="name"></h1>
+  <p class="role" data-i="role"></p>
+  <a class="btn" href="#contact" data-i="contactBtn"></a>
+  <a class="btn o" href="cv.pdf" download data-i="cvBtn"></a>
+</div>
+
+<section id="about"><h2 data-i="h1"></h2><p data-i="about"></p></section>
+<section id="skills"><h2 data-i="h2"></h2><div class="chips" id="skillList"></div></section>
+<section id="edu"><h2 data-i="h3"></h2><div class="card"><h3 data-i="eduT"></h3><p data-i="eduS"></p></div></section>
+<section id="courses"><h2 data-i="h4"></h2>
+  <ul id="courseList"></ul>
+  <h3 style="margin:1rem 0 .4rem" data-i="learnH"></h3>
+  <div class="chips" id="learnList"></div>
+</section>
+<section id="services"><h2 data-i="h5"></h2><div class="grid" id="servList"></div></section>
+<section id="work"><h2 data-i="h6"></h2>
+  <div class="grid"><div class="card soon" data-i="soon"></div><div class="card soon" data-i="soon"></div><div class="card soon" data-i="soon"></div></div>
+</section>
+<section id="links" class="links"><h2 data-i="h7"></h2>
+  <a class="btn o" target="_blank" rel="noopener" href="https://www.linkedin.com/in/dana-alqalam-148579333/">LinkedIn</a>
+  <a class="btn o" target="_blank" rel="noopener" href="https://app.ureed.com/profile/dana-255795">Ureed</a>
+  <a class="btn o" target="_blank" rel="noopener" href="https://khamsat.com/user/danaalqalam">Khamsat | خمسات</a>
+</section>
+<section id="contact"><h2 data-i="h8"></h2>
+  <p><a href="mailto:alqalamd9@gmail.com" style="color:var(--a)">alqalamd9@gmail.com</a></p>
+  <form id="f">
+    <input id="fn" required data-p="ph1">
+    <textarea id="fm" rows="4" required data-p="ph2"></textarea>
+    <button class="btn" type="submit" data-i="send"></button>
+  </form>
+</section>
+<footer>© 2026 Dana Alqalam</footer>
+
+<script>
+const T={
+ar:{av:'د',logo:'دانة القلم',name:'دانة محمد القلم',role:'مساعدة إدارية عن بعد | مترجمة عربي ↔ إنجليزي | إدخال بيانات',
+n1:'نبذة',n2:'المهارات',n3:'الدورات',n4:'الخدمات',n5:'حساباتي',n6:'تواصل',tg:'English',
+contactBtn:'تواصلي معي',cvBtn:'تحميل السيرة الذاتية',
+h1:'نبذة عني',about:'طالبة في جامعة دمشق، أعمل أونلاين في الترجمة بين العربية والإنجليزية وإدخال البيانات والدعم الإداري. أتميّز بالدقة والتنظيم والالتزام بالمواعيد، وأطوّر مهاراتي باستمرار عبر دورات معتمدة.',
+h2:'المهارات',skills:['إدخال بيانات','ترجمة عربي ↔ إنجليزي','إدارة البريد والمواعيد','Microsoft Office','Excel','Google Workspace (قيد التعلم)','Notion','Canva','تنسيق الملفات وتحويلها إلى PDF','تواصل كتابي'],
+h3:'الدراسة',eduT:'جامعة دمشق',eduS:'السنة التحضيرية',
+h4:'الدورات والشهادات',courses:['HP LIFE: Business Communications (مكتملة، تشرين الأول 2026)','دورات منصة إدراك','نتيجة Duolingo للإنجليزية: 81'],
+learnH:'قيد التعلّم حالياً',learn:['أساسيات Xero للمحاسبة','Google Workspace','أساسيات GDPR','Excel'],
+h5:'الخدمات',serv:[['ترجمة عربي ↔ إنجليزي','ترجمة دقيقة مع مراجعة قبل التسليم'],['إدخال بيانات','تنظيم وإدخال بيانات بدقة'],['تنسيق الملفات وتحويلها','Word إلى PDF مع الحفاظ على الخطوط والعربية'],['مساعدة إدارية افتراضية','بريد، جدولة مواعيد، وتنظيم مستندات']],
+h6:'أعمال مختارة',soon:'عينة قريباً',h7:'تجدونني على',h8:'تواصل',ph1:'الاسم',ph2:'رسالتك',send:'إرسال'},
+en:{av:'D',logo:'Dana Alqalam',name:'Dana Alqalam',role:'Remote Administrative Assistant | Arabic–English Translator | Data Entry',
+n1:'About',n2:'Skills',n3:'Courses',n4:'Services',n5:'Find me',n6:'Contact',tg:'عربي',
+contactBtn:'Contact me',cvBtn:'Download CV',
+h1:'About me',about:'A University of Damascus student working online in Arabic–English translation, data entry and administrative support. Detail-oriented, organized and deadline-driven, and continuously building my skills through accredited courses.',
+h2:'Skills',skills:['Data entry','Arabic–English translation','Email & calendar management','Microsoft Office','Excel','Google Workspace (learning)','Notion','Canva','File formatting & PDF conversion','Written communication'],
+h3:'Education',eduT:'University of Damascus',eduS:'Preparatory Year',
+h4:'Courses & Certificates',courses:['HP LIFE: Business Communications (completed, October 2026)','Edraak courses','Duolingo English score: 81'],
+learnH:'Currently learning',learn:['Xero accounting basics','Google Workspace','GDPR basics','Excel'],
+h5:'Services',serv:[['Arabic–English translation','Accurate translation, proofread before delivery'],['Data entry','Organized, accurate data entry'],['File formatting & conversion','Word to PDF keeping fonts and Arabic intact'],['Virtual administrative assistance','Email, scheduling and document organization']],
+h6:'Selected work',soon:'Sample coming soon',h7:'Find me on',h8:'Contact',ph1:'Your name',ph2:'Your message',send:'Send'}
+};
+let L='ar';
+try{L=localStorage.getItem('lang')||'ar'}catch(e){}
+function render(){
+  const t=T[L];
+  document.documentElement.lang=L;
+  document.documentElement.dir=L==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-i]').forEach(e=>e.textContent=t[e.dataset.i]);
+  document.querySelectorAll('[data-p]').forEach(e=>e.placeholder=t[e.dataset.p]);
+  document.getElementById('logo').textContent=t.logo;
+  document.getElementById('av').textContent=t.av;
+  document.getElementById('tg').textContent=t.tg;
+  document.getElementById('skillList').innerHTML=t.skills.map(s=>`<span class="chip">${s}</span>`).join('');
+  document.getElementById('learnList').innerHTML=t.learn.map(s=>`<span class="chip">${s}</span>`).join('');
+  document.getElementById('courseList').innerHTML=t.courses.map(s=>`<li>${s}</li>`).join('');
+  document.getElementById('servList').innerHTML=t.serv.map(s=>`<div class="card"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+}
+document.getElementById('tg').onclick=()=>{L=L==='ar'?'en':'ar';try{localStorage.setItem('lang',L)}catch(e){}render()};
+document.getElementById('f').onsubmit=e=>{
+  e.preventDefault();
+  const n=encodeURIComponent(document.getElementById('fn').value);
+  const m=encodeURIComponent(document.getElementById('fm').value);
+  location.href=`mailto:alqalamd9@gmail.com?subject=${n}&body=${m}`;
+};
+render();
+</script>
+</body>
+</html>
